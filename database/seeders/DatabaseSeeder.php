@@ -21,6 +21,7 @@ class DatabaseSeeder extends Seeder
         User::factory()->create([
             'name' => 'Anand Gupta',
             'email' => 'anand@gmail.com',
+            'password' => bcrypt('anand@123')
         ]);
 
         $categories = ['Smartphones', 'Fashion', 'Home Appliances'];
@@ -38,15 +39,17 @@ class DatabaseSeeder extends Seeder
             'slug' => Str::slug('iphone 15 pro max'),
             'description' => 'Apple iPhone 15 Pro Max (256 GB) - Blue Titanium',
             'price' => 148900,
-            'category_id' => 1
+            'category_id' => 1,
+            'image' => 'iphone15.png'
         ]);
 
         Product::create([
-            'name' => 'Lux Cozi Maroon Regular T-Shirt',
-            'slug' => Str::slug('Lux Cozi Maroon Regular T-Shirt'),
-            'description' => 'Men\'s Regular Fit Polo Neck Half Sleeve Solid Casual T-Shirt',
+            'name' => 'Jockey Black Underwear',
+            'slug' => Str::slug('Jockey Black Underwear'),
+            'description' => 'Men\'s Regular Fit underwear stylish and comfortable',
             'price' => 319.99,
-            'category_id' => 2
+            'category_id' => 2,
+            'image' => 'jockey-underwear.jpg'
         ]);
     }
 }

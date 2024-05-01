@@ -19,6 +19,7 @@ return new class extends Migration
             $table->text('description')->nullable();
             $table->decimal('price');
             $table->unsignedBigInteger('category_id');
+            $table->string('image')->nullable();
             $table->foreign('category_id')->references('id')->on('categories');
             $table->boolean('status')->default(Product::STATUS_ACTIVE);
             $table->timestamps();
